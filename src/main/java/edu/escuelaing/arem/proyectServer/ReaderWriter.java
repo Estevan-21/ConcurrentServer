@@ -39,13 +39,13 @@ public class ReaderWriter {
         BufferedReader in = new BufferedReader(
         new InputStreamReader(clientSocket.getInputStream()));
         
-        String inputLine="abc";
+        String inputLine;
         String  outputLine=null;
-        
-        Resources data=new Resources(in.readLine());
-        outputLine=data.sources();                
-        while ((inputLine = in.readLine()) != null) {              
-            System.out.println("Receivedddd: " + inputLine+"");                
+        if ((inputLine = in.readLine()) != null) { 
+        Resources data=new Resources(inputLine);
+        outputLine=data.sources();    }            
+        while ((inputLine = in.readLine()) != null) {               
+            System.out.println("Received: " + inputLine+"|");                
             if (!in.ready()) {       
                 break;
             }        
