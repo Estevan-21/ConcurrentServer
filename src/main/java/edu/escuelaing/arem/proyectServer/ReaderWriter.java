@@ -44,11 +44,8 @@ public class ReaderWriter {
         
         Resources data=new Resources(in.readLine());
         outputLine=data.sources();                
-        while ((inputLine = in.readLine()) != null) {   
-            if(inputLine==null){
-                System.out.println("NULLLLLLLLLLLLLL");
-            }
-            System.out.println("Received: " + inputLine+"|");                
+        while ((inputLine = in.readLine()) != null) {              
+            System.out.println("Receivedddd: " + inputLine+"");                
             if (!in.ready()) {       
                 break;
             }        
