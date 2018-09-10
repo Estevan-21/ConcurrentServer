@@ -36,7 +36,7 @@ public class Resources {
      */
     static String sources() throws IOException{
         String outputLine = null;        
-        System.out.println("Received: " + inputLine);
+        System.out.println("ReceivedDDDD: " + inputLine);
         if(inputLine.contains(".jpg")){     
             outputLine =leer("Resources/imagen.jpg")+                                 
             "<img src=\"http://teinco.edu.co/wp-content/uploads/2018/03/img_tecnisisi.jpg\" />"+ "</body>"+ "</html>" ;                                              
