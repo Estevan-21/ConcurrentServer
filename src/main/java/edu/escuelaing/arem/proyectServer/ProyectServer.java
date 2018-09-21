@@ -37,7 +37,7 @@ public class ProyectServer {
                 System.out.println("Listo para recibir ...");
                 clientSocket = serverSocket.accept();
                 server = new Server(clientSocket); 
-                ex.execute(server);   
+            ex.execute(server);   
             } catch (IOException e) {
                 System.err.println("Accept failed.");
                 System.exit(1);

@@ -21,8 +21,8 @@ public class Client {
     public static void main(String[] args) throws Exception {
        ExecutorService ex = Executors.newFixedThreadPool(10);
        URLReader reader;                            
-       for(int i = 0;i<100; i++){
-            reader = new URLReader("https://shrouded-island-73032.herokuapp.com/index.html"); 
+       for(int i = 0;i<20; i++){
+            reader = new URLReader("http://localhost:5000/index"); 
             ex.execute(reader);
         }
         ex.shutdown();
