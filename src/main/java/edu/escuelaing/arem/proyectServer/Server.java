@@ -18,9 +18,10 @@ import java.util.logging.Logger;
  * @author 2109950
  */
 public class Server extends Thread{
-    ServerSocket serverSocket;
-    public void Server(ServerSocket serverSocket){
-        this.serverSocket=serverSocket;
+    Socket clientSocket;
+    
+    public Server(Socket serverSocket){
+        this.clientSocket=serverSocket;
     }
                         
     /**
@@ -29,19 +30,7 @@ public class Server extends Thread{
      * @throws  java.io.IOException excepcion
      */
     @Override
-    public void run(){   
-        
-            
-
-            Socket clientSocket = null;
-            try {
-                System.out.println("Listo para recibir ...");
-                clientSocket = serverSocket.accept();
-            } catch (IOException e) {
-                System.err.println("Accept failed.");
-                System.exit(1);
-            }
-
+    public void run(){                                
             ReaderWriter reader=new ReaderWriter(clientSocket);
             try {
                 reader.read();
@@ -53,12 +42,7 @@ public class Server extends Thread{
                 clientSocket.close();
             } catch (IOException ex) {
                 Logger.getLogger(ProyectServer.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                serverSocket.close();
-            } catch (IOException ex) {
-                Logger.getLogger(ProyectServer.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }            
         }
  }      
     

@@ -32,11 +32,21 @@ public class ProyectServer {
                 System.err.println("Could not listen on port: "+getPort());
                 System.exit(1);
             }              
-            server = new Server(); 
-            ex.execute(server);
-        
-            ex.shutdown();
+            Socket clientSocket = null;
+            try {
+                System.out.println("Listo para recibir ...");
+                clientSocket = serverSocket.accept();
+                server = new Server(clientSocket); 
+                ex.execute(server);   
+            } catch (IOException e) {
+                System.err.println("Accept failed.");
+                System.exit(1);
+            }
+                     
+                        
+            serverSocket.close();
        }
+       //ex.shutdown();
     }
     
     /**
