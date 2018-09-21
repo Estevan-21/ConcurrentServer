@@ -22,7 +22,7 @@ public class Client {
        ExecutorService ex = Executors.newFixedThreadPool(10);
        URLReader reader;                            
        for(int i = 0;i<20; i++){
-            reader = new URLReader("http://localhost:5000/index"); 
+            reader = new URLReader("https://shrouded-escarpment-88677.herokuapp.com/index"); 
             ex.execute(reader);
         }
         ex.shutdown();

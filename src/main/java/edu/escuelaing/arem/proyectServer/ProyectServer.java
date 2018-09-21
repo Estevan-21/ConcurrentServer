@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  */
 public class ProyectServer {   
     public static void main(String[] args) throws Exception {
-       ExecutorService ex = Executors.newFixedThreadPool(10);
+       ExecutorService ex = Executors.newFixedThreadPool(100);
        Server server;
        while(true){
            ServerSocket serverSocket = null;
