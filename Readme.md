@@ -1,7 +1,7 @@
 # WEB SERVER
 ## ARQUITECTURAS EMPRESARIALES
-### LINK HEROKU /INDEX.HTML https://shrouded-island-73032.herokuapp.com/index.html
-### LINK HEROKU IMAGEN https://shrouded-island-73032.herokuapp.com/image.jpg
+### LINK HEROKU /INDEX.HTML https://shrouded-escarpment-88677.herokuapp.com/index
+### LINK HEROKU IMAGEN https://shrouded-escarpment-88677.herokuapp.com/a.jpg
 #### Brayam Estevan Vargas Pinzón
 #### Escuela Colombiana de Ingeniería Julio garavito
 
