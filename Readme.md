@@ -1,4 +1,4 @@
-# WEB SERVER
+# WEB SERVER CONCURRENTE
 ## ARQUITECTURAS EMPRESARIALES
 ### LINK HEROKU /INDEX.HTML https://shrouded-escarpment-88677.herokuapp.com/index
 ### LINK HEROKU IMAGEN https://shrouded-escarpment-88677.herokuapp.com/a.jpg
